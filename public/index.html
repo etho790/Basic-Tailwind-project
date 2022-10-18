@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!--INSTALLATION USING "PLAY CDN" ON THE TAILWIND WEBSITE-->
+
+
+<!--NOTE DOWN WHAT EACH CLASS USING TAILWIND DOES EXPLICITLY-->
+
+
+
+<body class= 'text-gray-900'>
+ <!--default colour text for all elements in the body should be gray -->
+
+    <!--CONTENT WRAPPER-->
+    <div class= "grid md:grid-cols-3"> 
+         <!--add a grid for everything under this div and Only specify it to have 3 columns in 1 row if 
+             the resolution is > 768px-->
+        <div class= "md:col-span-1">
+             <!--Only make everything under this div take 1 coloumn if the resolution is > 768px -->
+            <nav>
+                <div>
+                    <h1 class='font-bold uppercase p-4 border-b border-gray-100'>
+                        <a href='/' class="hover:text-gray-400">Food Website</a>
+                        <!--hover effect when you hover over the text, it turns lighter gray -->
+                    </h1>
+                </div>
+                <ul>
+                    <li class="text-gray-900 font-bold">
+                        <a href="#">
+                            <span>Home</span>
+
+                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                              </svg>
+                               <!--first we copy the entire svg code from heroicons website for a home icon, and in the class we give it a width of 5 -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>About</span>
+
+                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                              </svg>
+                              <!--first we copy the entire svg code from heroicons website for a question mark icon, and in the class we give it a width of 5 -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Contact</span>
+
+                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                              </svg>
+                               <!--first we copy the entire svg code from heroicons website for a call icon, and in the class we give it a width of 5 -->
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!--END NAV-->
+       
+        <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+            <!--add horizontal padding (px) of 16 and vertical padding of 6 (py), add background colour to gray 
+                and Only make all elements under this main should span 2 coloumns (col-span-2) if
+                the resolution > 768px-->
+            <div class ='flex justify-center md:justify-end'> 
+                <!--adds flex, justify the elements in the center at normal resolution but justifys it at the end
+                once the width > 768px-->
+                <a href="#" class='rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-primary md:border-4 text-primary hover:text-gray-400'>Log in</a>
+                <!--"rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" is essentially all the styling for a button, 
+                Only add a border -4 width if the resolution > 768px and a text colour of primary AND add a hovering effect to turn the text light gray when hovering over it-->
+                <a href="#" class='rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider border-primary md:border-4 text-primary ml-2 hover:text-gray-400'>Sign up</a>
+                <!--"rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" is essentially all the styling for a button, 
+                Only add a border -4 width if the resolution > 768px and a text colour of primary & a margin left of 2 AND add a hovering effect to turn the text light gray when hovering over it-->
+            </div>
+           
+
+
+            <header>
+                <h2 class='text-gray-700 text-6xl font-semibold'>Recipes</h2>
+                <h3></h3>
+            </header>
+
+            <div>
+                <h4 class='font-bold mt-12 pb-2 border-b border-gray-200'>Latest Recipes</h4>
+
+                <div class='mt-8 grid lg:grid-cols-3 gap-10'>
+                <!--Adds a margin-top of 8 and a grid, and layers them in 3 columns per row for the grid if the
+                    resolution > 1024px (lg) and each element to have a gap of 10-->
+
+
+
+                    <!--CARDS GO HERE-->
+                    <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                        <!--this entire div has a white background and has rounded corners,
+                        Uses overflow-hidden to clip any content within an element that overflows the bounds of that element
+                        and uses a drop shadow AND makes it a parent to any class that has "absolute" by giving it a relative tag 
+                        AND add a hover effect to increase the shadow of the cards when the cursors on each of the cards-->
+                        <img src="image/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
+                        <!--w-full essentially expands the width of the image to cover the entire div, 
+                            by default give it a height of 32 but when the size of the screen >640px (sm) 
+                            the height changes to 48 -->
+                        <div class="m-4">
+                             <!--adds margin around top, bottom, left and right and 4 is the size-->
+                            <span class="font-bold">5 Bean Chili Stew</span>
+                             <!--makes the text's font bold-->
+                            <span class="block text-gray-500-sm">Recipe by Mario</span>
+                            <!--makes the text block to push it to the next line, gray colour and makes it small-->
+                        </div>
+                        <div class= "bg-[#e2e2d5] text-slate-500 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                              <!--adds a beige background colour, adds a slate colour to the text, makes the font extra small, uppercase, 
+                                makes it bold, makes the entire div have rounded corners, adds padding of 2 and positions the element 
+                                relative to parent via the "absolute" tag at 0px from the top, adds margin left by a number of 2 and margin top by a number of 2-->
+                            
+                                <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  <!--first we copy the entire svg code from heroicons website for a clock icon, and in the class we give it a width of 5 
+                                    and inline-block so that it's in the same line as the span element below-->
+                                <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                        <!--this entire div has a white background and has rounded corners,
+                        Uses overflow-hidden to clip any content within an element that overflows the bounds of that element
+                        and uses a drop shadow AND makes it a parent to any class that has "absolute" by giving it a relative tag 
+                        AND add a hover effect to increase the shadow of the cards when the cursors on each of the cards-->
+                        <img src="image/noodles.jpg" alt="noodles" class="w-full h-32 sm:h-48 object-cover">
+                        <!--w-full essentially expands the width of the image to cover the entire div, 
+                            by default give it a height of 32 but when the size of the screen >640px (sm) 
+                            the height changes to 48 -->
+                        <div class="m-4">
+                             <!--adds margin around top, bottom, left and right and 4 is the size-->
+                            <span class="font-bold">Veg noodles</span>
+                             <!--makes the text's font bold-->
+                            <span class="block text-gray-500-sm">Recipe by Mario</span>
+                            <!--makes the text block to push it to the next line, gray colour and makes it small-->
+                        </div>
+                        <div class= "bg-[#e2e2d5] text-slate-500 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                              <!--adds a beige background colour, adds a slate colour to the text, makes the font extra small, uppercase, 
+                                makes it bold, makes the entire div have rounded corners, adds padding of 2 and positions the element 
+                                relative to parent via the "absolute" tag at 0px from the top, adds margin left by a number of 2 and margin top by a number of 2-->
+                            
+                                <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  <!--first we copy the entire svg code from heroicons website for a clock icon, and in the class we give it a width of 5 
+                                    and inline-block so that it's in the same line as the span element below-->
+                                <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-white rounded overflow-hidden shadow-md relative hover:shadow-lg">
+                        <!--this entire div has a white background and has rounded corners,
+                        Uses overflow-hidden to clip any content within an element that overflows the bounds of that element
+                        and uses a drop shadow AND makes it a parent to any class that has "absolute" by giving it a relative tag 
+                        AND add a hover effect to increase the shadow of the cards when the cursors on each of the cards-->
+                        <img src="image/curry.jpg" alt="curry" class="w-full h-32 sm:h-48 object-cover">
+                        <!--w-full essentially expands the width of the image to cover the entire div, 
+                            by default give it a height of 32 but when the size of the screen >640px (sm) 
+                            the height changes to 48 -->
+                        <div class="m-4">
+                             <!--adds margin around top, bottom, left and right and 4 is the size-->
+                            <span class="font-bold">Chicken Curry</span>
+                             <!--makes the text's font bold-->
+                            <span class="block text-gray-500-sm">Recipe by Mario</span>
+                            <!--makes the text block to push it to the next line, gray colour and makes it small-->
+                        </div>
+                        <div class= "bg-[#e2e2d5] text-slate-500 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                              <!--adds a beige background colour, adds a slate colour to the text, makes the font extra small, uppercase, 
+                                makes it bold, makes the entire div have rounded corners, adds padding of 2 and positions the element 
+                                relative to parent via the "absolute" tag at 0px from the top, adds margin left by a number of 2 and margin top by a number of 2-->
+                            
+                                <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                  <!--first we copy the entire svg code from heroicons website for a clock icon, and in the class we give it a width of 5 
+                                    and inline-block so that it's in the same line as the span element below-->
+
+                                <span>25 mins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class='font-bold mt-12 pb-2 border-b border-gray-200'>Most Popular</h4>
+                
+                <div class='mt-8'>
+                     <!--CARDS GO HERE-->
+                </div>
+
+                <div class="mt-12 flex justify-center">
+                    <div class="rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider bg-violet-100 hover:bg-violet-200">Load more</div>
+                   <!--"rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" is essentially all the styling for a button, 
+                        makes the background violet & adds hovering effect too "hover:bg-violet-200"-->
+                </div>    
+            </div>
+
+        </main>
+
+    </div>
+</body>
+</html>
