@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src= "index.js" defer></script> 
+   
 </head>
 <!--INSTALLATION USING "PLAY CDN" ON THE TAILWIND WEBSITE-->
 
 
 <!--NOTE DOWN WHAT EACH CLASS USING TAILWIND DOES EXPLICITLY-->
-
 
 
 <body class= 'text-gray-900'>
@@ -20,44 +21,68 @@
     <div class= "grid md:grid-cols-3"> 
          <!--add a grid for everything under this div and Only specify it to have 3 columns in 1 row if 
              the resolution is > 768px-->
-        <div class= "md:col-span-1">
-             <!--Only make everything under this div take 1 coloumn if the resolution is > 768px -->
-            <nav>
-                <div>
+        <div class= "md:col-span-1 md:flex md:justify-end">
+             <!--Only make everything under this div take 1 coloumn if the resolution is > 768px
+            & make it flexible & justified to the right again if the resolution is > 768px-->
+            <nav class= "text-right">
+                <!--align the text of the foodwebsite, home, about & contact to the right-->
+                <div class="flex justify-between items-center">
+                    <!--adding flexbox for both elements under this div & add justify-between 
+                        to give a massive space between the two elements under this div & items center to center the elements
+                        in the middle of the horzontal axis; ie; in this case to bring the hamburger icon lower -->
                     <h1 class='font-bold uppercase p-4 border-b border-gray-100'>
                         <a href='/' class="hover:text-gray-400">Food Website</a>
                         <!--hover effect when you hover over the text, it turns lighter gray -->
                     </h1>
+                    <div class="px-4 cursor-pointer md:hidden" id="burger">
+                        <!--elements under this particular div have a horizontal padding of 4, and a cursor point when you hover over it
+                        & it's hidden if the resolution is > 768px -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                          </svg>   
+                          <!-- we copy the entire svg code from heroicons website for a hamburger icon -->                       
+                    </div>
                 </div>
-                <ul>
-                    <li class="text-gray-900 font-bold">
-                        <a href="#">
+                <ul class="text-sm mt-6 hidden md:block" id="menu">
+                    <!--makes the font size smaller and increases the margin top to 6 from "food website" text
+                    and makes all the links under the ul hidden by default but only displays all the elements on it's own line
+                    if the resolution is > 768px -->
+                    <li class="text-gray-900 font-bold py-1">
+                         <!--Makes the text gray & bold & Adds vertical padding top and bottom of 1-->
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-primary">
+                            <!--adds horizontal padding left and right by 4 & adds flex & justifies to the right for the icon 
+                            & adds border right of width 4 and adds a primary colour -->
                             <span>Home</span>
-
-                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                               </svg>
-                               <!--first we copy the entire svg code from heroicons website for a home icon, and in the class we give it a width of 5 -->
+                               <!--first we copy the entire svg code from heroicons website for a home icon, and in the class we give it a width of 5 & a margin left of 2 -->
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="py-1">
+                        <!--Adds vertical padding top and bottom of 1-->
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                             <!--adds horizontal padding left and right by 4 & adds flex & justifies to the right for the icon 
+                             & adds border right of width 4 and adds a white colour-->
                             <span>About</span>
 
-                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                               </svg>
-                              <!--first we copy the entire svg code from heroicons website for a question mark icon, and in the class we give it a width of 5 -->
+                              <!--first we copy the entire svg code from heroicons website for a question mark icon, and in the class we give it a width of 5 & a margin left of 2 -->
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="py-1">
+                         <!--Adds vertical padding top and bottom of 1-->
+                        <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                             <!--adds horizontal padding left and right by 4 & adds flex & justifies to the right for the icon
+                             & adds border right of width 4 and adds a white colour -->
                             <span>Contact</span>
 
-                            <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                               </svg>
-                               <!--first we copy the entire svg code from heroicons website for a call icon, and in the class we give it a width of 5 -->
+                               <!--first we copy the entire svg code from heroicons website for a call icon, and in the class we give it a width of 5 & a margin left of 2 -->
                         </a>
                     </li>
                 </ul>
@@ -208,5 +233,10 @@
         </main>
 
     </div>
+
+
+    
+   
+
 </body>
 </html>
