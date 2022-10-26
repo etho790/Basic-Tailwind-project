@@ -1,6 +1,6 @@
 # Basic-Tailwind-project
 
-This project was made using javascript, html linked to the tailwind library.
+This project was made using javascript & html using classes derived from the tailwind library.
 
 The Project essentially is a basic food website that is styled using tailwind & is fully responsive. 
 Moreover this project was an attempt at creating a basic website aimed at introducing the tailwind framework whilst making it a familiar framework to work with.   
